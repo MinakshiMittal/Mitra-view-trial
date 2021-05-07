@@ -41,6 +41,7 @@ export const SideNav = () => {
       </Link>
 
       <svg
+        style={{ padding: "2rem 0" }}
         xmlns="http://www.w3.org/2000/svg"
         width="inherit"
         height="36"
