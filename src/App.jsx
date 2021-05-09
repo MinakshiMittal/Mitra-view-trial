@@ -1,7 +1,13 @@
 import "./styles.css";
 import { MainMenu, SideNav } from "./Components";
 import { Routes, Route } from "react-router-dom";
-import { Home, VideoDetail, LikedVideos, DislikedVideos } from "./Pages";
+import {
+  Home,
+  VideoDetail,
+  LikedVideos,
+  DislikedVideos,
+  WatchLaterVideos
+} from "./Pages";
 
 export default function App() {
   return (
@@ -26,8 +32,8 @@ export default function App() {
           <Route path="/video/:videoId" element={<VideoDetail />} />
           <Route path="/liked-videos" element={<LikedVideos />} />
           <Route path="/disliked-videos" element={<DislikedVideos />} />
-          {/* <Route path="/watch-later-videos" element={<WatchLaterVideos />} />
-          <Route path="playlist" element={<PlaylistPage />} /> */}
+          <Route path="/watch-later-videos" element={<WatchLaterVideos />} />
+          {/* <Route path="playlist" element={<PlaylistPage />} /> */}
         </Routes>
       </div>
     </div>

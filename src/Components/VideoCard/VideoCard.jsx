@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { VideoPlay } from "../VideoPlay";
 
 export const VideoCard = ({ video, noDetail }) => {
-  console.log("Product Card", video);
   return (
     <>
       {noDetail && (
