@@ -1,7 +1,7 @@
 import "./styles.css";
-import { MainMenu, SideNav } from "./Components/index";
+import { MainMenu, SideNav } from "./Components";
 import { Routes, Route } from "react-router-dom";
-import { Home, VideoDetail } from "./Pages/index";
+import { Home, VideoDetail, LikedVideos, DislikedVideos } from "./Pages";
 
 export default function App() {
   return (
@@ -19,12 +19,14 @@ export default function App() {
       >
         <SideNav />
       </div>
+
       <div className="component-display" style={{}}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/video/:videoId" element={<VideoDetail />} />
-          {/* <Route path="/liked-videos" element={<LikedVideos />} />
-          <Route path="/watch-later-videos" element={<WatchLaterVideos />} />
+          <Route path="/liked-videos" element={<LikedVideos />} />
+          <Route path="/disliked-videos" element={<DislikedVideos />} />
+          {/* <Route path="/watch-later-videos" element={<WatchLaterVideos />} />
           <Route path="playlist" element={<PlaylistPage />} /> */}
         </Routes>
       </div>

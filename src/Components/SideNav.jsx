@@ -24,6 +24,18 @@ export const SideNav = () => {
           className="far fa-thumbs-up"
         ></i>
       </Link>
+      <Link to="/disliked-videos" style={{ textDecoration: "none" }}>
+        <i
+          style={{
+            color: "#c34d76",
+            fontSize: "2rem",
+            paddingLeft: "0",
+            display: "block",
+            paddingBottom: "2.3rem"
+          }}
+          className="far fa-thumbs-down"
+        ></i>
+      </Link>
       <Link to="/watch-later-videos" style={{ textDecoration: "none" }}>
         <i
           style={{
@@ -51,7 +63,6 @@ export const SideNav = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        paddingBottom="2rem"
       >
         <circle cx="12" cy="12" r="5"></circle>
         <line x1="12" y1="1" x2="12" y2="3"></line>
