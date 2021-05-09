@@ -62,6 +62,28 @@ export const videoReducer = (state, action) => {
         )
       };
 
+    case "ADD_TO_WATCH_LATER":
+      return {
+        ...state,
+        videos: state.videos.map((video) => {
+          if (video.id === action.payload.id) {
+            return { ...video, watchLater: true };
+          }
+          return video;
+        })
+      };
+
+    case "REMOVE_FROM_WATCH_LATER":
+      return {
+        ...state,
+        videos: state.videos.map((video) => {
+          if (video.id === action.payload.id) {
+            return { ...video, watchLater: false };
+          }
+          return video;
+        })
+      };
+
     default:
       return state;
   }

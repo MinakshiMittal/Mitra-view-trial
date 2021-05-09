@@ -73,16 +73,42 @@ export const VideoPlay = ({ video }) => {
             className="fas fa-thumbs-down"
           ></i>
         )}
-        <i
-          style={{
-            color: "#c34d76",
-            fontSize: "2rem",
-            paddingLeft: "0",
-            display: "block",
-            paddingBottom: "2rem"
-          }}
-          className="far fa-clock"
-        ></i>
+        {!video.watchLater && (
+          <i
+            onClick={() =>
+              videoDispatch({
+                type: "ADD_TO_WATCH_LATER",
+                payload: video
+              })
+            }
+            style={{
+              color: "#c34d76",
+              fontSize: "2rem",
+              paddingLeft: "0",
+              display: "block",
+              paddingBottom: "2rem"
+            }}
+            className="far fa-clock"
+          ></i>
+        )}
+        {video.watchLater && (
+          <i
+            onClick={() =>
+              videoDispatch({
+                type: "REMOVE_FROM_WATCH_LATER",
+                payload: video
+              })
+            }
+            style={{
+              color: "#c34d76",
+              fontSize: "2rem",
+              paddingLeft: "0",
+              display: "block",
+              paddingBottom: "2rem"
+            }}
+            className="fas fa-clock"
+          ></i>
+        )}
         <PlaylistIcon />
       </div>
     </div>
