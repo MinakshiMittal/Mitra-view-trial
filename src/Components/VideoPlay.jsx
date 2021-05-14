@@ -1,5 +1,5 @@
 import { useVideo } from "../Context/video-context";
-import { PlaylistIcon } from "./index";
+import { PlaylistIcon, Modal } from "../Components";
 export const VideoPlay = ({ video }) => {
   const { dispatch: videoDispatch } = useVideo();
   return (
@@ -110,6 +110,7 @@ export const VideoPlay = ({ video }) => {
           ></i>
         )}
         <PlaylistIcon />
+        <Modal video={video} />
       </div>
     </div>
   );

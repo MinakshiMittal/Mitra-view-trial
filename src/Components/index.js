@@ -4,3 +4,4 @@ export { HomeIcon } from "./HomeIcon";
 export { PlaylistIcon } from "./PlaylistIcon";
 export { VideoCard } from "./VideoCard/VideoCard";
 export { VideoPlay } from "./VideoPlay";
+export { Modal } from "./Modal";
